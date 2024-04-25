@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide Puzzle</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
-</head>
-<body>
-    <h1>Slide Puzzle Game</h1>
-    <button id="buttonA" class="button">Game 1</button>
-    <button id="buttonB" class="button">Game 2</button>
-    <div id="board">
-    </div>
-    <h2>Turn: <span id="turns">0</span></h2>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trang Chủ</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+
+        <div id="heading">
+            <div class="heading_menu">Gamene</div>
+            <div class="heading_menu">Game 1</div>
+            <div class="heading_menu">Game 2</div>
+            <div class="heading_menu">Game 3</div>
+        </div>
+
+        <button class="button" onclick="chuyenDenTrang1()">Game 1</button>
+        <button class="button" onclick="chuyenDenTrang2()">Game 2</button>
+
+        <div id="menu">
+            <a href="game1.html" class="gameSlidePuzzle">
+                <img src="aa/win.png" alt="">
+            </a>
+            <a href="game2.html" class="gameSlidePuzzle">
+                <img src="bb/win.png" alt="">
+            </a>
+        </div>
+
+        <script>
+        function chuyenDenTrang1() {
+            window.location.href = 'game1.html';
+        }
+
+        function chuyenDenTrang2() {
+            window.location.href = 'game2.html';
+        }
+        </script>
+
+    </body>
+</html>

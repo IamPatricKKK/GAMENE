@@ -1,6 +1,5 @@
-var option = "aa/";
-let buttonA = document.getElementById('buttonA');
-let buttonB = document.getElementById('buttonB');
+let a = document.getElementById("game");
+let option = a.className;
 
 var rows = 4;
 var columns = 4;
@@ -31,7 +30,7 @@ window.onload = function() {
             //<img id="0-0" src="1.jpg">
             let tile = document.createElement("img");
             tile.id = r.toString() + "-" + c.toString();
-            tile.src = "aa/" + imgOrder.shift() + ".png";
+            tile.src = option + imgOrder.shift() + ".png";
 
             //DRAG FUNCTIONALITY
             tile.addEventListener("dragstart", dragStart);  //click an image to drag
@@ -108,7 +107,7 @@ function dragDrop() {
 }
 
 function dragEnd() {
-    if (!otherTile.src.includes("aa/16.png")) {
+    if (!otherTile.src.includes(option + "16.png")) {
         return;
     }
 
