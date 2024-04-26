@@ -3,38 +3,143 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Trang Chủ</title>
+        <title>GameNe</title>
+        <link rel="stylesheet" href="heading.css">
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
 
-        <div id="heading">
-            <div class="heading_menu">Gamene</div>
-            <div class="heading_menu">Game 1</div>
-            <div class="heading_menu">Game 2</div>
-            <div class="heading_menu">Game 3</div>
-        </div>
+        <header id="heading">
+            <div class="colheader">
+                <ul id="menu_header">
+                    <li class="logo"><a href="index.html">GameNe</a></li>
+                    <li class="item_header"><a id="Slide_Puzzle" href="#head_container_1">Slide Puzzle</a></li>
+                    <li class="item_header"><a id="Game_2040" href="#container_2">Game 2040</a></li>
+                    <li class="item_header"><a id="Game_Minesweeper" href="#container_2">Game Minesweeper</a></li>
+                </ul>
+            </div>
+            <div class="colheader"></div>
+        </header>
 
-        <button class="button" onclick="chuyenDenTrang1()">Game 1</button>
-        <button class="button" onclick="chuyenDenTrang2()">Game 2</button>
+        <div id="head_container_1" style="width: 100%; height: 1px;"></div>
+        <section class="container_1">
+            <div class="Game1">
+                <h2>Slide Puzzle Game</h2>
+                <div class="div_menu_game1">
+                    <a href="SlidePuzzle/game1.html" class="menu_game gameSP_1">
+                        <img src="SlidePuzzle/picture/aa/win.png" alt="">
+                        <p>River</p>
+                    </a>
+                    <a href="SlidePuzzle/game2.html" class="menu_game gameSP_2">
+                        <img src="SlidePuzzle/picture/bb/win.png" alt="">
+                        <p>Pikachu</p>
+                    </a>
+                    <a href="SlidePuzzle/game3.html" class="menu_game gameSP_3">
+                        <img src="SlidePuzzle/picture/cc/win.png" alt="">
+                        <p>Mountain</p>
+                    </a>
+                    <a href="SlidePuzzle/game4.html" class="menu_game gameSP_4">
+                        <img src="SlidePuzzle/picture/dd/win.png" alt="">
+                        <p>Doodle</p>
+                    </a>
+                    <a href="SlidePuzzle/game5.html" class="menu_game gameSP_5">
+                        <img src="SlidePuzzle/picture/ee/win.png" alt="">
+                        <p>The City</p>
+                    </a>
+                    <a href="SlidePuzzle/game6.html" class="menu_game gameSP_6">
+                        <img src="SlidePuzzle/picture/ff/win.png" alt="">
+                        <p>VanGoghCopy</p>
+                    </a>
+                    <a href="SlidePuzzle/game7.html" class="menu_game gameSP_7">
+                        <img src="SlidePuzzle/picture/gg/win.png" alt="">
+                        <p>Cá</p>
+                    </a>
+                    <a href="SlidePuzzle/game8.html" class="menu_game gameSP_8">
+                        <img src="SlidePuzzle/picture/hh/win.png" alt="">
+                        <p>Car</p>
+                    </a>
+                    <a href="SlidePuzzle/game9.html" class="menu_game gameSP_9">
+                        <img src="SlidePuzzle/picture/ii/win.png" alt="">
+                        <p>Combat aircrafts</p>
+                    </a>
+                    <a href="SlidePuzzle/game10.html" class="menu_game gameSP_10">
+                        <img src="SlidePuzzle/picture/kk/win.png" alt="">
+                        <p>Galaxy</p>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-        <div id="menu">
-            <a href="game1.html" class="gameSlidePuzzle">
-                <img src="aa/win.png" alt="">
-            </a>
-            <a href="game2.html" class="gameSlidePuzzle">
-                <img src="bb/win.png" alt="">
-            </a>
-        </div>
+
+        <section class="container_2">
+            <div class="Game Game2">
+                <h2>Game 2048</h2>
+                <a href="Game2048/Game2048.html">
+                    <img src="Game2048/win.png" alt="">
+                </a>
+            </div>
+
+            <div class="Game Game2">
+                <h2>Game Minesweeper</h2>
+                <a href="Minesweeper/GameMinesweeper.html">
+                    <img src="Minesweeper/win.png" alt="">
+                </a>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="list">
+                <ul>
+                    <li>abc</li>
+                    <li>abc</li>
+                    <li>abc</li>
+                </ul>
+            </div>
+            <div class="list">
+                <ul>
+                    <li>abc</li>
+                    <li>abc</li>
+                    <li>abc</li>
+                </ul>
+            </div>
+            <div class="list">
+                <ul>
+                    <li>abc</li>
+                    <li>abc</li>
+                    <li>abc</li>
+                </ul>
+            </div>
+        </section>
+        
+
+
+
+
+
+
+
+
+
 
         <script>
-        function chuyenDenTrang1() {
-            window.location.href = 'game1.html';
-        }
+            document.getElementById("Slide_Puzzle").addEventListener("click", function(event) {
+                event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
 
-        function chuyenDenTrang2() {
-            window.location.href = 'game2.html';
-        }
+                const container2 = document.getElementById("head_container_1");
+                container2.scrollIntoView({ behavior: "smooth" }); // Cuộn mượt mà đến container 2
+            });
+            document.getElementById("Game_2040").addEventListener("click", function(event) {
+                event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+                const container2 = document.querySelector(".container_2");
+                container2.scrollIntoView({ behavior: "smooth" }); // Cuộn mượt mà đến container 2
+            });
+            document.getElementById("Game_Minesweeper").addEventListener("click", function(event) {
+                event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+                const container2 = document.querySelector(".container_2");
+                container2.scrollIntoView({ behavior: "smooth" }); // Cuộn mượt mà đến container 2
+            });
         </script>
 
     </body>

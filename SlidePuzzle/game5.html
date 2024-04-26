@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Slide Puzzle</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../heading.css">
+    </head>
+    <body>
+
+        <header id="heading">
+            <ul id="menu_header">
+                <li class="logo"><a href="../index.html">GameNe</a></li>
+                <li class="item_header"><a href="">Game 1</a></li>
+                <li class="item_header"><a href="">Game 2</a></li>
+                <li class="item_header"><a href="">Game 3</a></li>
+            </ul>
+        </header>
+
+        <h1 id="game" class="ee/">Slide Puzzle Game 1</h1>
+        
+        <div id="container">
+            <div class="col col1">
+                <h2>Turn: <span id="turns">0</span></h2>
+                <div id="board">
+                </div>
+            </div>
+            <div class="col col2">
+                <img class="imgIn" src="picture/ee/win.png" alt="">
+
+                <button class="button" onclick="Reload()">Reload</button>
+                <script>
+                    function Reload() {
+                        location.reload();
+                    }
+                </script>
+                
+                <button class="button" onclick="chuyenDenTrangChu()">Back</button>
+                <script>
+                    function chuyenDenTrangChu() {
+                        window.location.href = '../index.html';
+                    }
+                </script>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>2048</title>
+        <link rel="stylesheet" href="2048.css">
+        <link rel="stylesheet" href="../heading.css">
+        <script src="2048.js"></script>
+    </head>
+
+    <body>
+
+        <header id="heading">
+            <div class="colheader">
+                <ul id="menu_header">
+                    <li class="logo"><a href="../index.html">GameNe</a></li>
+                    <li class="item_header"><a href="">Slide Puzzle</a></li>
+                    <li class="item_header"><a href="">Game 2</a></li>
+                    <li class="item_header"><a href="">Game 3</a></li>
+                </ul>
+            </div>
+            <div class="colheader"></div>
+        </header>
+
+        <div class="habon"></div>
+
+        <h1>2048</h1>
+        <hr>
+        <h2>Score: <span id="score">0</span></h2>
+        
+        <button class="button" onclick="Reload()">Reload</button>
+        <script>
+            function Reload() {
+                location.reload();
+            }
+            </script>
+        
+        <button class="button" onclick="chuyenDenTrangChu()">Back</button>
+        <script>
+            function chuyenDenTrangChu() {
+                window.location.href = '../index.html';
+            }    
+        </script>
+            
+        <div id="board"></div>
+    </body>
+</html>
